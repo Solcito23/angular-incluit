@@ -17,11 +17,12 @@
             <input id="description" type="text" formControlName="description" class="form-control">
 
             <label for="deadline">Realizar antes de:</label>
-            <input id="deadline" type="text" formControlName="deadline" class="form-control" bsDatepicker
-                [bsConfig]="{ adaptivePosition: true }">
+            <input id="deadline" type="text" formControlName="deadline" class="form-control" bsDatepicker [bsConfig]="{ adaptivePosition: true }">
 
-            <label for="date">Feca de creacion:</label>
+            <label for="date">Fecha de creacion:</label>
             <input id="date" type="text" formControlName="date" class="form-control" bsDatepicker disabled>
+
+            <input id="isDone" type="hidden" formControlName="isDone" value="false">
         </form>
     </div>
     <div class="modal-footer">

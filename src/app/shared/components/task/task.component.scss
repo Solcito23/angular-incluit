@@ -7,7 +7,6 @@
     margin-bottom: 10px;
     background-color: white;
     position: relative;
-
     .task-title {
         font-size: 22px;
     }
@@ -21,19 +20,27 @@
         margin-top: 10px;
         padding-top: 10px;
         border-top: solid 1px #ccc;
-
         .task-date {
             color: #aaa;
-
             &.danger {
-                color:red;
+                color: red;
             }
         }
     }
-
-    .btn-delete {
+    .btn-action {
         position: absolute;
-        top: 8px;
         right: 8px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 12px;
+        &.btn-edit {
+            top: 8px;
+        }
+        &.btn-delete {
+            top: 38px;
+        }
+        &.btn-done {
+            top: 68px;
+        }
     }
 }
