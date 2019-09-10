@@ -1,0 +1,23 @@
+<!-- <span *ngIf="!currentWeather?.count && !isloading"> No hay resultados</span> -->
+<div class="alert alert-success" role="alert" *ngIf="currentWeather?.count && !isLoading">
+    {{currentWeather?.count}} resultados encontrados
+</div>
+
+<div *ngIf="isLoading" class="alert alert-info" role="alert">
+    Buscando...
+</div>
+
+<div class="card-columns m-2">
+    <div *ngFor="let clima of currentWeather?.list" class="card border-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">{{clima.name}} , {{clima.sys.country}}</div>
+        <div class="card-body text-info">
+            <h5 class="card-title"><small>Temperatura:</small> {{clima.main.temp}} gds</h5>
+            <h5 class="card-title"><small>Viento:</small> {{clima.wind.speed}} km</h5>
+            <h5 class="card-title"><small>Humedad:</small> {{clima.main.humidity}} %</h5>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!currentWeather?.count && !isLoading" class="alert alert-dark" role="alert">
+    No se encontraron resultados
+</div>
